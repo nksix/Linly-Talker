@@ -9,7 +9,7 @@ class ChatGPT():
         if proxy_url:
             os.environ['https_proxy'] = proxy_url if proxy_url else None
             os.environ['http_proxy'] = proxy_url if proxy_url else None
-        openai.api_key = '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'
+        openai.api_key = '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'
         self.model_path = model_path
         self.prompt = "所有回答最多使用1000字"
 

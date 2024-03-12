@@ -31,7 +31,7 @@ class LLM:
         self.mode = mode
         
     def init_model(self, model_name, model_path, api_key=None, proxy_url=None):
-        if model_name not in ['Linly', 'Qwen', 'Gemini']:
+        if model_name not in ['Linly', 'Qwen', 'Gemini', 'chatgpt']:
             raise ValueError("model_name must be 'Linly', 'Qwen', or 'Gemini'(其他模型还未集成)")
         if model_name == 'Linly':
             llm = Linly(self.mode, model_path)
@@ -39,6 +39,8 @@ class LLM:
             llm = Qwen(self.mode, model_path)
         elif model_name == 'Gemini':
             llm = Gemini(model_path, api_key, proxy_url)
+        elif model_name == 'chatgpt':
+            llm = ChatGPT(api_key=api_key)
         return llm
     
     def test_Linly(self, question="如何应对压力？", model_path="Linly-AI/Chinese-LLaMA-2-7B-hf"):

@@ -589,7 +589,8 @@ if __name__ == "__main__":
     # llm = LLM(mode='offline').init_model('Linly', 'Linly-AI/Chinese-LLaMA-2-7B-hf')
     # llm = LLM(mode='offline').init_model('Gemini', 'gemini-pro', api_key = "your api key")
     # llm = LLM(mode='offline').init_model('Qwen', 'Qwen/Qwen-1_8B-Chat')
-    llm = LLM(mode='offline').init_model('Qwen', 'Qwen/Qwen-1_8B-Chat')
+    # llm = LLM(mode='offline').init_model('Qwen', 'Qwen/Qwen-1_8B-Chat')
+    llm = LLM(mode='offline').init_model('chatgpt', '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')
     try:
         talker = SadTalker(lazy_load=True)
     except Exception as e:
